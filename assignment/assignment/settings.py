@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "firstapp",
-    "corsheaders"
+    "corsheaders",
+    "tasks"
 ]
 
 MIDDLEWARE = [
@@ -137,5 +138,14 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # or wherever your frontend runs
+    "http://localhost:3000",
+    "http://localhost:8000",  # or wherever your frontend runs
+]
+
+
+CORS_ALLOW_CREDENTIALS = True
+
+# CSRF
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:3000",
 ]
